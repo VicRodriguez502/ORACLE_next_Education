@@ -1,0 +1,57 @@
+<meta charset = 'UTF-8'>
+<h1>Indice de Masa Muscular</h1>
+<br><br>
+
+<script>
+    function saltarLinea(){
+        document.write('<br>');
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularImc(peso,altura){
+        imc = peso / (altura * altura);
+        return(imc)
+    }
+
+    //Datos utilizando una función
+    pesoCristian = 71;
+    alturacristian = 1.72
+    imcCristian = calcularImc(pesoCristian,alturacristian);
+    imprimir('El IMC de Cristian es: ' + imcCristian)
+
+    //Datos sin utlizar función
+    var pesoVictor = 253;
+    var alturaVictor = 1.68;
+    var imcVictor = pesoVictor / (alturaVictor * alturaVictor);
+    imprimir('El IMC de Victor es: ' + imcVictor)
+    saltarLinea();
+
+</script>
+
+Nuevo método para calcular el IMC 
+<br><br>
+
+<script>
+    function saltarLinea(){
+        document.write('<br>');
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularImc(peso,altura,nombre,peso1,altura1,nombre1){
+        imc = peso / (altura * altura);
+        imc1 = peso1 / (altura1 * altura1)
+        imprimir('El promedio del imc calculado de ' + nombre + ' y ' +nombre1 + ' es: ' + (imc1+imc) / 2)
+    }
+
+    calcularImc(71,1.72,'Victor',75,1.73,'Marcos');
+
+</script>
+
