@@ -1,0 +1,49 @@
+<meta charset = 'UTF-8'>
+<h1> PROGRAMA 1</h1>
+
+Acá en este punto empezaremos a trabajar ejemplos de funciones
+<br><br>
+
+<script>
+    function saltarlinea(){
+        document.write('<br>');
+    }
+
+    var anho = 2022;
+
+    document.write('Juan tiene: ' + (anho - 2000) + ' años');
+    saltarlinea();
+    document.write('Pedro tiene: ' + (anho - 1995) + ' años');
+    saltarlinea();
+
+    anho = 2030
+    document.write('Carlos tiene: ' + (anho - 2005) + ' años');
+    saltarlinea()
+    saltarlinea()
+</script>
+
+En el siguiente bloque de código trabajaremos ejemplos de Funciones con parámetros:
+<br><br>
+
+<script>
+    // Esta función es para cambiar document.write por esta función
+    function imprimir(frase){
+        document.write(frase)
+        saltarlinea();
+    }
+
+    //Esta función es para saltos de línea
+    function saltarlinea(){
+        document.write('<br><br>');
+    }
+
+    imprimir('Esta es una prueba probando la función con parametro');
+
+    var anho = 2022;
+
+    imprimir('Juan tiene: ' + (anho - 2000) + ' años');
+    imprimir('Pedro tiene: ' + (anho - 1995) + ' años');
+
+    anho = 2030
+    imprimir('Carlos tiene: ' + (anho - 2005) + ' años');
+</script>
