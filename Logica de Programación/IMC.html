@@ -54,4 +54,30 @@ Nuevo método para calcular el IMC
     calcularImc(71,1.72,'Victor',75,1.73,'Marcos');
 
 </script>
+<br>
+Calcular IMC pero con interacción con el usuario
+<br><br>
 
+<script>
+    function saltarLinea(){
+        document.write('<br><br>');
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    function calcularImc(peso,altura){
+        return (peso / (altura * altura));
+    }
+
+    name = prompt('Informe su Nombre: ')
+    pesoInformado = prompt('Informe su peso: ')
+    alturaInformado = prompt('Informe su altura: ')
+
+    imcCalculado = calcularImc(pesoInformado,alturaInformado);
+
+    imprimir(name + ' Su IMC calculado es: ' + imcCalculado)
+
+</script>
