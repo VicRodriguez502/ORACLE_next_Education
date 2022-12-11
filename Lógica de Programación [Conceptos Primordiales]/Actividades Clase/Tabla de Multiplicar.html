@@ -1,0 +1,26 @@
+<meta charset = 'UTF-8'>
+<h1>PROGRAMA - CALCULAR TABLA DE MULTIPLICAR</h1>
+
+<script>
+    function saltarLinea(){
+        document.write('<br>');
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+    
+    var numTabla = parseInt(prompt('Ingrese el número de la tabla que desea ver'))
+    var multiplicador = 1;
+
+    while(multiplicador <= 10){
+        imprimir (numTabla * multiplicador)
+        multiplicador = multiplicador + 1
+    }
+
+    //El for es formado por 3 partes: 1) El inicializador 2) La instrucción 3)El incrementador
+    for (var multiplicador = 1; multiplicador <= 10; multiplicador++){
+        imprimir (numTabla * multiplicador)
+    }
+</script>
