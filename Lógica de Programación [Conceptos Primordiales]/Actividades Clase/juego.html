@@ -12,13 +12,20 @@
     }
 
     var numeroAdivinar = Math.round(Math.random()*10);
-    var numeroUsuario = parseInt(prompt('Ingrese un número entre 0 y 10'));
+    var intentos = 3;
+    var contador = 1; //Siempre que vamos a trabajar un ciclo es necesario usar un contador
 
-    if (numeroUsuario == numeroAdivinar){
-        imprimir('¡FELICIDADES! Acertaste')
+    while(contador <= intentos){
+        var numeroUsuario = parseInt(prompt('Ingrese un número entre 0 y 10'));
+
+        if (numeroUsuario == numeroAdivinar){
+            alert('¡FELICIDADES! Acertaste en el intento ' + contador + 'El número pensado era: ' + numeroAdivinar);
+            break
+        } else {
+            alert('Lo siento, Intentalo de nuevo, el número era: ')
+        }
+        contador++;
     }
-    else {
-        imprimir('Lo siento, Intentalo de nuevo, el número era: ' + numeroAdivinar)
-    }
+    imprimir('Recarga la página para Iniciar de nuevo el Juego');
 
 </script>
