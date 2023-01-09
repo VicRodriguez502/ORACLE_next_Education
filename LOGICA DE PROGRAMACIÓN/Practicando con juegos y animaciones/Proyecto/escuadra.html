@@ -1,0 +1,25 @@
+<meta charset = 'UTF-8'>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    pantalla = document.querySelector('canvas');
+    pincel = pantalla.getContext('2d');
+
+    //Creación de un Tríangulo Grande
+    pincel.fillStyle = 'dark';
+    pincel.beginPath(); //Instrucción para comenzar un nuevo camino, como si fuera mapa
+    pincel.moveTo(50,50); //Instrucción para que la variable pincel se mueva a una posción especifica
+    pincel.lineTo(50,400); //Instrucción para que la variable pincel trace una linea hasta el siguiente punto
+    pincel.lineTo(400,400);
+    pincel.fill(); //Función de llenado para que llene el triángulo del color antes asignado
+
+    //Creación de un Tríangulo Pequeño
+    pincel.fillStyle = 'white';
+    pincel.beginPath(); 
+    pincel.moveTo(100,175); 
+    pincel.lineTo(100,350); 
+    pincel.lineTo(275,350);
+    pincel.fill(); 
+
+</script>
