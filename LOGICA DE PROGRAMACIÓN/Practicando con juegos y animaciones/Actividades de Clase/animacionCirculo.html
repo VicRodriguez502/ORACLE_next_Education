@@ -1,0 +1,42 @@
+<meta charset = 'UTF-8'>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d')
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0,0,600,400);
+
+
+    //Función dedicada únicamente para la creación de un circulo
+    function circulo(x,y,radio){
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI) //Math.Pi es la función principal de pi en javaScript
+        pincel.fill();
+    }
+
+    //Función dedicada para limpiar la pantalla
+    function limpiarPantalla(){
+        pincel.clearRect(0,0,600,400)
+    }
+
+    var x = 0
+    var sentido = 1;
+    //Función utilizada para que limpie la pantalla y luego gráfique el circulo 
+    function actualizarPantalla(){
+        limpiarPantalla();
+        if (x > 600){
+            sentido = -1;
+        } else if (x < 0){
+            sentido = 1;
+        }
+        circulo(x,20,10);
+        x = x + sentido;
+    }
+
+    setInterval(actualizarPantalla,5) //setInterval es una función de javaScript la cuál permite una función y el tiempo en el que se ejecuta la misma
+
+</script>

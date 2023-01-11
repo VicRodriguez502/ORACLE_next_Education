@@ -1,0 +1,60 @@
+<meta charset = 'UTF-8'>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d')
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0,0,600,400);
+
+    var radio = 10;
+    var xrandom;
+    var yrandom;
+    //Función dedicada únicamente para la creación de un circulo
+    function circulo(x,y,radio,color){
+        pincel.fillStyle = color;
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2*Math.PI) //Math.Pi es la función principal de pi en javaScript
+        pincel.fill();
+    }
+
+    //Función dedicada para limpiar la pantalla
+    function limpiarPantalla(){
+        pincel.clearRect(0,0,600,400)
+    }
+
+    var x = 0;
+    
+    function objetivo(x,y){
+        circulo(x,y,radio + 20,'red')
+        circulo(x,y,radio + 10,'white')
+        circulo(x,y,radio,'red')
+    }
+
+    function  posicionAleatoria(maximo){
+        return Math.floor(Math.random()*maximo); //La función Math.floor funciona para poder redondear los números al número menos y no al mayor.
+    }
+
+    //Función utilizada para que limpie la pantalla y luego gráfique el circulo 
+    function actualizarPantalla(){
+        limpiarPantalla();
+        xrandom = posicionAleatoria(600);
+        yrandom = posicionAleatoria(400);
+        objetivo(xrandom,yrandom);
+        x++;
+    }
+
+    setInterval(actualizarPantalla,1000);
+
+    function disparar(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+        if ((x < xrandom + radio) && (x > xrandom - radio) && (y < yrandom + radio) && (y > yrandom - radio)){
+            alert('Tiro Certero')
+        }
+    }
+
+    pantalla.onclick = disparar;
+
+</script>

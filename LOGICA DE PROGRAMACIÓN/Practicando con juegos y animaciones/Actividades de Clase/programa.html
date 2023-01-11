@@ -1,0 +1,53 @@
+<meta charset = 'UTF-8'>
+
+<canvas width="600" height="400"> </canvas>
+
+<script>
+    var pantalla = document.querySelector('canvas');
+    var pincel = pantalla.getContext('2d');
+
+    pincel.fillStyle = 'grey';
+    pincel.fillRect(0,0,600,400);
+    
+
+    //Función que se utiliza para la creación de coordenadas en pantalla
+    function alerta(evento){
+        var x = evento.pageX - pantalla.offsetLeft; //Coordenada en el eje X, se le resta lo que sobra de la pantalla a la izquierda
+        var y = evento.pageY - pantalla.offsetTop; //Coordenada en el eje Y, se le resta lo que sobra arriba
+        alert('Usted hizo un clic en las coordenadas: ' + x + ',' + y)
+    }
+
+    var colores = ['blue','red','green'];
+    var indiceColor = 0; //Iniciamos con azul
+
+    //Función que se utiliza para la creación de un circulo, con variantes de color 
+    function circulo(evento){
+        var x = evento.pageX - pantalla.offsetLeft;
+        var y = evento.pageY - pantalla.offsetTop;
+
+        pincel.fillStyle = colores[indiceColor];
+        pincel.beginPath();
+        pincel.arc(x,y,10,0,2*3.1416)
+        pincel.fill();
+    }
+
+
+
+    //pantalla.onclick = alerta; //Cuando se llama a la función como un parametro de un evento no es necesario colocarle los parantesis
+    pantalla.onclick = circulo; //Llama a la función circulo para que en la pantalla al momento de darle click en cualquier parte del canvas puedas escribir lo que quieras
+
+    //Funci+on que avisa si hubo cambio de COlor
+    function alterarColor() {
+        indiceColor++;
+        if(indiceColor >= colores.length){
+            indiceColor = 0;
+        }
+        return false;
+    }
+
+    pantalla.oncontextmenu = alterarColor;
+
+
+
+
+</script>
