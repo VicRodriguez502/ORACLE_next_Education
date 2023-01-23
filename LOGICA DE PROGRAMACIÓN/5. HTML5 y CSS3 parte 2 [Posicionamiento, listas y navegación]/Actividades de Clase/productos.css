@@ -1,0 +1,94 @@
+header{
+    background-color: #bbbbbb; 
+    padding: 20px 0px;
+}
+
+.caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 20px;
+}
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{ /* Etiqueta para capturar el movimiento del mouse */
+    color: #c78c19; /* COloca el color al texto únicamente capturado en el movimiento */
+    text-decoration: underline; /* Coloca un subrayado unicamente capturado en el moviento */
+}
+
+.productos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+}
+
+.productos li:hover{ /*Pára capturar el movimiento que se realiza en los productos */
+    border-color: #c78c19;
+}
+
+.productos li:active{ /*active: sirve para capturar cuando uno le da clic */
+    border-color: #088c19;
+}
+
+.productos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{ /*Esto significa que cuando agarremos el movimiento en cualquier parte del producto, agrande el titulo unicamente */
+    font-size: 33px;
+}
+
+.productosDescripcion {
+    font-size: 18px;
+}
+
+.productoPrecio {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center; /*Para alinear el texto al centro */
+    background: url(../imagenes/bg.jpg); /*Funciona para colocar una imagen como color del fondo */
+    padding: 40px;
+}
+
+.copy{
+    color: #FFFFFF; /*Para colocarle el color solamente a la letra */
+    font-size: 13px; /* Para cambiarle el tamaño a la letra */
+    margin: 20px; /* Para colocar un margen */
+}
+
+/* Link de la página para los caracteres especiales: unicode-table.com */
