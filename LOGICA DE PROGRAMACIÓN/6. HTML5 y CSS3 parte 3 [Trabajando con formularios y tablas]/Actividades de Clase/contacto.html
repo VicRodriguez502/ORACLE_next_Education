@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset = 'UTF-8'>
+        <title>Contacto - Barbería Alura</title>
+        <link rel = 'stylesheet' href = 'reset.css'> 
+        <link rel = 'stylesheet' href = 'contacto.css'>
+    </head>
+    <body>
+        <header>
+            <div class = 'caja'>
+                <h1><img src = 'C:\Users\victo\OneDrive\Documentos\ORACLE_next_Education\LOGICA DE PROGRAMACIÓN\5. HTML5 y CSS3 parte 2 [Posicionamiento, listas y navegación]\imagenes\logo.png' alt ='Logo de la Barbería Alura'></h1>
+                <nav>
+                    <ul class = 'navegacion'>
+                        <li><a href = 'file:///C:/Users/victo/OneDrive/Documentos/ORACLE_next_Education/LOGICA%20DE%20PROGRAMACI%C3%93N/4.%20HTML5%20y%20CSS3%20parte%201%20[Primera%20p%C3%A1gina%20web]/Actividades%20de%20Clase/index.html'>Home</a></li>
+                        <li><a href = 'file:///C:/Users/victo/OneDrive/Documentos/ORACLE_next_Education/LOGICA%20DE%20PROGRAMACI%C3%93N/5.%20HTML5%20y%20CSS3%20parte%202%20[Posicionamiento,%20listas%20y%20navegaci%C3%B3n]/Actividades%20de%20Clase/productos.html'>Productos</a></li>
+                        <li><a href = 'file:///C:/Users/victo/OneDrive/Documentos/ORACLE_next_Education/LOGICA%20DE%20PROGRAMACI%C3%93N/6.%20HTML5%20y%20CSS3%20parte%203%20[Trabajando%20con%20formularios%20y%20tablas]/Actividades%20de%20Clase/contacto.html'>Contactos</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <form>
+                <label for = 'nombre'> Nombre y Apellido: </label>
+                <input type = 'text' id = 'nombre' class = 'input-padron' required>
+
+                <label for = 'correo'> Correo: </label>
+                <input type = 'email' id = 'correo' class = 'input-padron' required placeholder="email@dominio.com">
+
+                <label for = 'telefono'> Teléfono: </label>
+                <input type = 'tel' id = 'telefono' class = 'input-padron' required placeholder="(xxx) xxxx-xxxx">
+
+                <label for = 'mensaje'> Mensaje:</label>
+                <textarea cols = '70' rows ='10' id = 'mensaje' class = 'input-padron' required> </textarea>
+
+                <fieldset>
+                    <legend>¿Cómo le gustaría que lo contactemos?</legend>
+                    <label for = 'radio-email'><input type = 'radio' name = 'contacto' value = 'email' id = 'radio-email'> Email</label>
+
+                    <label for = 'radio-telefono'><input type = 'radio' name = 'contacto' value = 'telefono' id = 'radio-telefono'> Teléfono</label>
+
+                    <label for = 'radio-whatsapp'><input type = 'radio' name = 'contacto' value = 'whatsapp' id = 'radio-whatsapp' checked> WhatsApp</label>
+                    
+                </fieldset>
+                <fieldset>
+                <legend>¿En que horario le gustaría ser atendido?</legend>
+                    <select>
+                        <option>Mañana</option>
+                        <option>Tarde</option>
+                        <option>Noche</option>
+                    </select>
+                </fieldset>
+
+                <label class = 'check'><input type = 'checkbox' checked>Le gustaría recibir novedades de la Barbería Alura</label>
+
+                <input type = 'submit' value ='Enviar Formulario' class = 'enviar'>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>8:00 am - 20:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>8:00 am - 20:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>8:00 am - 20:00 pm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <img src = 'C:\Users\victo\OneDrive\Documentos\ORACLE_next_Education\LOGICA DE PROGRAMACIÓN\6. HTML5 y CSS3 parte 3 [Trabajando con formularios y tablas]\Imagenes\logo-blanco.png' alt ='Logo de la Barbería Alura'>
+            <p class = 'copy'>&copy Copyright Barbería Alura 2023</p>
+        </footer>
+    </body>
+</html>

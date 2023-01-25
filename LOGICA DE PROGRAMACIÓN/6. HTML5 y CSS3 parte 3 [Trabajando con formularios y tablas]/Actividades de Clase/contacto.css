@@ -1,0 +1,112 @@
+header{
+    background-color: #bbbbbb; 
+    padding: 20px 0px;
+}
+
+.caja {
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0px;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 20px;
+}
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover{ /* Etiqueta para capturar el movimiento del mouse */
+    color: #c78c19; /* COloca el color al texto únicamente capturado en el movimiento */
+    text-decoration: underline; /* Coloca un subrayado unicamente capturado en el moviento */
+}
+
+main {
+    width: 940px; /*Se pone 940px para centrar algo */
+    margin: 0 auto; 
+}
+
+form{
+    margin: 40px 0; /*Creamos un margen para arriba y para abajo, pero no para los lados*/
+}
+
+form label, form legend {
+    display: block; /*Por defecto ya trae el inline el formulario entonces le ponemos block */
+    font-size: 20px;
+    margin: 0 0 10px; /*Margen con 0 arriba, 0 abajo, pero 10pixeles a la derecha */
+}
+
+.input-padron{
+    display: block; /*Por defecto ya trae el inline el formulario entonces le ponemos block */
+    margin: 0 0 20px;
+    padding: 10px 25px; /*Se le dio 10pixeles para arriba y para abajo y 25pixeles hacia la derecha y izquierda, de tamaño del label */
+    width: 50%;
+}
+
+.check{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%; /*Para que ocupe un 40% de los 940px */
+    padding: 15px 0; /*Padding es margen interno */
+    font-size: 18px;
+    font-weight: bold; /*Para que la letra sea negrita */
+    color: white;
+    background: orange;
+    border: none; /*para quitar el borde */
+    border-radius: 10px; /*para redondear las esquinas del borde */
+    transition: 1s all; /*Funciona para hacer una trancisión mas lenta en todos los movimientos */
+    cursor: pointer; /*Para cambiar la forma del cursor */
+}
+
+.enviar:hover{
+    background: darkorange;
+    transform: scale(1.2); /*Es para que se agrende en transición */
+    /*transform: rotate(70deg); Para que gire el elemento gire */
+}
+
+footer {
+    text-align: center; /*Para alinear el texto al centro */
+    background: url(../imagenes/bg.jpg); /*Funciona para colocar una imagen como color del fondo */
+    padding: 40px;
+}
+
+.copy{
+    color: #FFFFFF; /*Para colocarle el color solamente a la letra */
+    font-size: 13px; /* Para cambiarle el tamaño a la letra */
+    margin: 20px; /* Para colocar un margen */
+}
+
+table{
+    margin: 40px 40px;/*de margen externo */
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, thead{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/* Jerarquía de CSS 
+El CSS lee primero el id, luego la clase y por último la etiqueta 
+Nota: Si hacemos la modificación directamente desde HTML, tendra mucho mayor peso que en CSS
+
+mobileinputtypes.com Verificar esta página para poder cambiar detalles
+*/
